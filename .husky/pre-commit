@@ -1,14 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# bloqueia uso de --no-verify (opcional)
-if echo "$HUSKY_GIT_PARAMS" | grep -q -- "--no-verify"; then
-  echo "🚫 O uso de '--no-verify' não é permitido!"
-  exit 1
-fi
-
-# 1) corrige e formata só o que está staged
+echo "🔍 Rodando lint/format nos staged..."
 npx lint-staged || exit 1
 
-# 2) type-check do projeto todo
+echo "🧠 Type-check do projeto..."
 npm run type-check || exit 1

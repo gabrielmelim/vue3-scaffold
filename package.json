@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --build --noEmit && vite build",
+    "build:quiet": "vue-tsc --build --noEmit --pretty false && vite build --logLevel warn",
     "preview": "vite preview --port 5173",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
