@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 1) corrige e formata SÓ o que está staged (eslint + prettier)
+npx lint-staged || exit 1
+
+# 2) checagem de tipos do projeto todo
+npm run type-check || exit 1

@@ -1,0 +1,65 @@
+{
+  "name": "stiix-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --build --noEmit && vite build",
+    "preview": "vite preview --port 5173",
+    "type-check": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier -w .",
+    "check": "npm run type-check && npm run lint",
+    "clean": "rimraf dist node_modules package-lock.json",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,cjs,mjs,ts,tsx,vue}": [
+      "eslint --fix",
+      "prettier -w"
+    ],
+    "*.{json,md,css,scss,sass,html,yml,yaml}": [
+      "prettier -w"
+    ]
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "axios": "^1.11.0",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1",
+    "vuetify": "^3.9.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": "^22.18.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "eslint-plugin-vue": "~10.3.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.4.2",
+    "lint-staged": "^16.1.6",
+    "npm-run-all2": "^8.0.4",
+    "prettier": "^3.6.2",
+    "sass-embedded": "^1.92.0",
+    "typescript": "~5.8.0",
+    "typescript-eslint": "^8.42.0",
+    "unplugin-vue-router": "^0.15.0",
+    "vite": "^7.1.4",
+    "vite-plugin-vue-devtools": "^8.0.0",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vue-tsc": "^3.0.6"
+  }
+}

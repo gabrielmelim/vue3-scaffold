@@ -1,0 +1,5 @@
+// src/styles/settings.scss
+@use 'vuetify/settings' with (
+  // exemplo: desativar utilitários gerados (opcional)
+  $utilities: false
+);

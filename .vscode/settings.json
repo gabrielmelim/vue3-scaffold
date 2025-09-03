@@ -1,0 +1,33 @@
+{
+  "explorer.compactFolders": false,
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  "eslint.validate": ["javascript", "typescript", "vue", "json"],
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 800,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.endOfLine": "lf",
+
+  "vue.server.hybridMode": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
